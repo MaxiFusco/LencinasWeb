@@ -18,12 +18,13 @@
             min-height: 100%;
         }
 
-        /* IMAGEN DE FONDO DE TODA LA PÁGINA */
+        /* FONDO: IMAGEN EN PANTALLAS GRANDES Y CELESTE EN CELULARES */
         body {
             margin: 0;
             min-height: 100vh;
             padding: 0 30px;
 
+            background-color: #dff5ff;
             background-image: url("fondo.jpg");
             background-size: 100% 100%;
             background-position: top left;
@@ -49,11 +50,48 @@
             vertical-align: middle;
         }
 
-        /* DISEÑO RESPONSIVE PARA CELULARES */
+        /* BOTÓN PARA IR A LA OTRA PÁGINA */
+        .contenedor-boton {
+            display: flex;
+            justify-content: center;
+            margin: 36px 0 24px;
+            padding: 16px 0;
+        }
+
+        .boton-mas-informacion {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 8px;
+            background-color: #123c5a;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+        }
+
+        .boton-mas-informacion:hover {
+            background-color: #1d5c83;
+        }
+
+        .boton-mas-informacion:focus-visible {
+            outline: 3px solid #111111;
+            outline-offset: 3px;
+        }
+
+        /* CELULARES: FONDO CELESTE LISO, SIN IMAGEN */
         @media screen and (max-width: 600px) {
 
             body {
                 padding: 0 15px;
+                background-image: none;
+                background-color: #dff5ff;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
             }
 
             #im2,
@@ -63,9 +101,9 @@
                 max-width: 100%;
             }
 
-            img {
+            .boton-mas-informacion {
                 max-width: 100%;
-                height: auto;
+                padding: 13px 22px;
             }
         }
     </style>
@@ -87,6 +125,7 @@
     </p>
 
     <img id="im2" src="foto%20%284%29.jpg" alt="Avión J-35">
+
     <img id="img1" src="foto%20%285%29.jpg" alt="Avión J-35A">
 
 
@@ -116,34 +155,34 @@
     <h4>1. Misiles aire-aire (BVRAAM y de corto alcance)</h4>
 
     <ul>
-        <li>
-            PL-10: misil de largo alcance guiado por radar activo.
-        </li>
-
-        <img id="img3" src="foto%20%283%29.jpg" alt="Misil PL-10">
 
         <li>
-            PL-15: misil de largo alcance guiado por radar activo.
+            PL-10: misil de largo alcance guiado por radar activo.<br>
+            <img id="img3" src="foto%20%283%29.jpg" alt="Misil PL-10">
         </li>
-
-        <img id="img4" src="foto%20%282%29.jpg" alt="Misil PL-15">
 
         <li>
-            PL-21: misil aire-aire de muy largo alcance con ramjet.
+            PL-15: misil de largo alcance guiado por radar activo.<br>
+            <img id="img4" src="foto%20%282%29.jpg" alt="Misil PL-15">
         </li>
 
-        <img id="img5" src="foto (1).jpg" alt="Misil PL-21">
+        <li>
+            PL-21: misil aire-aire de muy largo alcance con ramjet.<br>
+            <img id="img5" src="foto (1).jpg" alt="Misil PL-21">
+        </li>
 
         <li>
             Operaciones adicionales mencionadas en el inventario:
             PL-17 y variantes de exportación como PL-15E y PL-10E.
         </li>
+
     </ul>
 
 
     <h4>2. Munición de ataque a tierra</h4>
 
     <ul>
+
         <li>
             Bombas de pequeño diámetro (SDB): hasta 12 unidades
             en configuración interna.
@@ -162,6 +201,7 @@
             Misiles antibuque y antirradiación: misiles especializados
             como el LD-8A o desarrollos furtivos antibuque de largo alcance.
         </li>
+
     </ul>
 
 
@@ -202,6 +242,7 @@
     </p>
 
     <ul>
+
         <li>
             <strong>MATERIALES COMPUESTOS:</strong>
             utilizan un alto porcentaje de materiales compuestos de matriz
@@ -219,6 +260,7 @@
             con acabados superficiales especiales, lo que generó debate sobre
             nuevas pinturas o capas protectoras de alta tecnología.
         </li>
+
     </ul>
 
 
@@ -234,6 +276,7 @@
     <h4>SHENYANG J-35 (VERSIÓN NAVAL):</h4>
 
     <ul>
+
         <li>
             <strong>DESTINO:</strong>
             diseñado especialmente para operar desde portaaviones de la
@@ -247,12 +290,14 @@
             apontaje) para soportar despegues asistidos por catapulta
             electromagnética (CATOBAR) y aterrizajes en cubierta.
         </li>
+
     </ul>
 
 
     <h4>J-35A (VERSIÓN TERRESTRE):</h4>
 
     <ul>
+
         <li>
             <strong>DESTINO:</strong>
             desarrollado para la Fuerza Aérea del Ejército Popular de
@@ -267,7 +312,17 @@
             para el vuelo terrestre y no requiere el equipo necesario
             para operaciones navales.
         </li>
+
     </ul>
+
+
+    <!-- BOTÓN PARA IR A NODAROWEB -->
+    <div class="contenedor-boton">
+        <a class="boton-mas-informacion"
+           href="https://maxifusco.github.io/NodaroWeb/">
+            Más Información
+        </a>
+    </div>
 
 </body>
 
